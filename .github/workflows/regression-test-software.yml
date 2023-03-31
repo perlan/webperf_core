@@ -1,9 +1,9 @@
 name: "Regression Test - Software (Alpha) Test"
 on:
   workflow_dispatch:
-  # push:
-  #   paths-ignore:
-  #     - '**.md'
+  push:
+    paths-ignore:
+      - '**.md'
 jobs:
   build:
     runs-on: ${{ matrix.os }}
