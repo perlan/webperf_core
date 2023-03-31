@@ -1,8 +1,9 @@
 name: "Regression Test - Performance (Sitespeed.io) Test"
 on:
-  push:
-    paths-ignore:
-      - '**.md'
+  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
 jobs:
   build:
     runs-on: ${{ matrix.os }}

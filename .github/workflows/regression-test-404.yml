@@ -1,8 +1,9 @@
 name: "Regression Test - 404 (Page not Found) Test"
-on: 
-  push:
-    paths-ignore:
-      - '**.md'
+on:
+  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
 jobs:
   build:
     runs-on: ${{ matrix.os }}
