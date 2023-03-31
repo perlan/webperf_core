@@ -13,10 +13,10 @@ jobs:
             matrix:
                 os: ['ubuntu-latest']
                 version: [25]
-                config: ['review_show_improvements_only=True,sitespeed_use_docker=False,software_use_stealth=False']
+                config: ['review_show_improvements_only=True,sitespeed_use_docker=False']
                 include:
                   - os: ubuntu-latest
-                    config: 'review_show_improvements_only=True,sitespeed_use_docker=True,software_use_stealth=False'
+                    config: 'review_show_improvements_only=True,sitespeed_use_docker=True'
                     version: 25
     steps:
     - name: Check out repository code
