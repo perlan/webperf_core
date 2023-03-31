@@ -1,8 +1,9 @@
 name: "Regression Test - Google Lighthouse Based Test(s)"
 on:
-  push:
-    paths-ignore:
-      - '**.md'
+  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
       - 'software-full.json'
       - 'software-sources.json'
       - '**update-software.yml'

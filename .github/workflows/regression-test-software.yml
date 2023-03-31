@@ -1,8 +1,9 @@
 name: "Regression Test - Software (Alpha) Test"
-on: 
-  push:
-    paths-ignore:
-      - '**.md'
+on:
+  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
       - 'software-sources.json'
       - '**update-software.yml'
 jobs:
@@ -52,7 +53,7 @@ jobs:
       name: RUNNING TEST - LINUX
       run: |
          python default.py -t ${{ matrix.version }} -r -u https://www.kth.se/ -o .github/workflows/testresult-${{ matrix.version }}.json
-         python .github/workflows/verify_result.py -t ${{ matrix.version }} | jq '.tests[].data | fromjson'
+         python .github/workflows/verify_result.py -t ${{ matrix.version }}
     - if: ${{ matrix.os == 'windows-latest' }}
       name: RUNNING TEST - WINDOWS
       run: |

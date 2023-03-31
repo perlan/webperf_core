@@ -1,9 +1,10 @@
 name: "Regression Test - 404 (Page not Found) Test"
-on: 
-  push:
-    paths-ignore:
-      - '**.md'
-      - 'software-full.json'
+on:
+  workflow_dispatch:
+  # push:
+  #   paths-ignore:
+  #     - '**.md'
+        'software-full.json'
       - 'software-sources.json'
       - '**update-software.yml'
       - 'update_software.py'
