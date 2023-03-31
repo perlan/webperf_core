@@ -11,7 +11,7 @@ jobs:
             matrix:
                 os: ['ubuntu-latest']
                 version: [25]
-                config: ['review_show_improvements_only=True,sitespeed_use_docker=False']
+                config: ['review_show_improvements_only=True,sitespeed_use_docker=False,software_use_stealth=True']
                 include:
                   - os: ubuntu-latest
                     config: 'review_show_improvements_only=True,sitespeed_use_docker=True'
