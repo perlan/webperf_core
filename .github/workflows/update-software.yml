@@ -1,6 +1,7 @@
 name: "Software - Update version and security info"
 on:
-  schedule:
+  workflow_dispatch:
+  #schedule:
   #  https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onschedule
   #  * is a special character in YAML so you have to quote this string
   #  - cron: '30 8 14,28 * *'
